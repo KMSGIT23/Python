@@ -19,11 +19,16 @@ txt = '''신경발달장애 Neurodevelopmental Disorders
 변태성욕장애 Paraphilic Disorders
 기타 정신질환 Other Mental Disorders'''
 
-dic = {}
+dic={}
 
-lines = txt.splitlines()
-for line in lines:
-    ko, en = line.split(' ', 1)
-    dic[ko] = en
+is_eng = lambda x: 65 <= ord(x) <= 90 or 97 <= ord(x) <= 122
+
+for l in txt.splitlines():
+    i = 0
+    while not is_eng(l[i]):
+        i += 1
+    else:
+        ko, en = l[:i - 1], l[i:]
+        dic[ko] = en
 
 print(dic)
