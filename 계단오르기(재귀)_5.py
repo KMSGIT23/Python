@@ -9,6 +9,7 @@ def s(n):
         return 0
     if m[n] != 0:
         return m[n]
+        
     if n == 1:
         m[n] = a[1]
         return m[n]
