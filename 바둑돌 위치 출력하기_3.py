@@ -1,6 +1,6 @@
 u = [[0] * 19 for _ in range(19)]
-
 n = int(input())
+
 for i in range(n):
     a, b = map(int, input().split())
     u[a - 1][b - 1] = 1
