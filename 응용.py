@@ -1,6 +1,5 @@
 import random
 import time
-
 import speech_recognition as sr
 
 f = open('japanese_words.csv', encoding='utf-8')
